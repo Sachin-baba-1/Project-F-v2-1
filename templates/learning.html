@@ -1,0 +1,22 @@
+<p>
+  {% for j in todays_learning %}
+      <div  class="border-bottom row " style="margin-bottom:16; padding:8px "}>
+        <div class='col-9'>
+          <h1> day {{j['day']}} </h1>
+        <h4 style="color:rgb(120,120,120)">
+        {{ j['topic']}}
+          </h4>
+        {%if j['leature'] in j and j['leature']%}
+        <h1>
+          lecuture: {{j['leature']}}
+          {%else%}
+          <h4> lecuture: none </h4>
+        {%endif%}
+        </h1>
+        </div>
+        <div class='col-3'>
+        <a href="https://google.com" type="button" class="btn btn-outline-primary">explore {{j['day']}}</a>
+        </div>
+      </div>
+  {% endfor %}
+</p>
